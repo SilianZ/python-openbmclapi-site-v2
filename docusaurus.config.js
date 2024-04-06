@@ -53,6 +53,7 @@ const config = {
         items: [
           {
             type: 'docSidebar',
+            sidebarId: 'docs',
             position: 'left',
             label: '文档',
           },
