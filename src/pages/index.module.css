@@ -10,14 +10,85 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.hero {
+  padding: 48px;
+}
+
+.heroInner {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.heroProjectTagline {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}
+
+.heroTitle b {
+  color: var(--ifm-color-primary);
+}
+
+@keyframes jack-in-the-box {
+  0% {
+      opacity: 0;
+      transform: scale(0.1) rotate(30deg);
+      transform-origin: center bottom;
   }
+
+  50% {
+      transform: rotate(-10deg);
+  }
+
+  70% {
+      transform: rotate(3deg);
+  }
+
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.heroLogo {
+  animation-duration: 2s;
+  animation-name: jack-in-the-box;
+  margin-top: 10px;
+  padding: 0 10px 10px;
+  height: auto;
 }
 
 .buttons {
   display: flex;
   align-items: center;
+  margin-top: 30px;
   justify-content: center;
+  --ifm-button-size-multiplier: 1.6;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 1065px) {
+  .heroBanner {
+      padding: 2rem;
+  }
+  .hero {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  .heroInner {
+      padding: 0;
+  }
+
+  .heroProjectTagline {
+      font-size: 30px;
+      text-align: center;
+  }
+
+  .heroLogo {
+      display: block;
+      float: none;
+      margin: 0 auto;
+  }
 }
