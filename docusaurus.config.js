@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Python OpenBMCLAPI',
   favicon: 'img/logo.svg',
-  url: 'https://python-openbmclapi.bugungu.top/',
+  url: 'https://python-openbmclapi.ttb-network.top/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -95,6 +95,12 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.okaidia,
         additionalLanguages: ['bash', 'diff', 'json', 'python', 'powershell']
+      },
+      algolia: {
+        appId: '6DIHTRUAUN',
+        apiKey: 'cd3106965920c949b776f2ce254c460e',
+        indexName: 'python-openbmclapi-ttb-network',
+        contextualSearch: true,
       },
     }),
 };
