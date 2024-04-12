@@ -100,7 +100,7 @@ const config = {
         appId: '6DIHTRUAUN',
         apiKey: 'dc14db6cef67dfc2ddefcaf22e03981b',
         indexName: 'python-openbmclapi-ttb-network',
-        contextualSearch: true,
+        contextualSearch: false,
       },
     }),
 };
