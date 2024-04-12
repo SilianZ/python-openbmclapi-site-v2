@@ -71,8 +71,8 @@ const config = {
             title: '文档',
             items: [
               {
-                label: '快速上手',
-                to: '/docs/intro',
+                label: '简介',
+                to: '/docs/introduction',
               },
             ],
           },
