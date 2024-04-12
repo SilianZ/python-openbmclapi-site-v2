@@ -98,7 +98,7 @@ const config = {
       },
       algolia: {
         appId: '6DIHTRUAUN',
-        apiKey: 'cd3106965920c949b776f2ce254c460e',
+        apiKey: 'dc14db6cef67dfc2ddefcaf22e03981b',
         indexName: 'python-openbmclapi-ttb-network',
         contextualSearch: true,
       },
