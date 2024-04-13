@@ -16,7 +16,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    locales: ['zh-Hans', 'en'],
   },
 
   presets: [
@@ -42,7 +42,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/card.svg',
       navbar: {
         title: 'Python OpenBMCLAPI',
@@ -56,6 +55,10 @@ const config = {
             sidebarId: 'docs',
             position: 'left',
             label: '文档',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             href: 'https://github.com/TTB-Network/python-openbmclapi',
