@@ -57,6 +57,12 @@ const config = {
             label: '文档',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'api',
+            position: 'left',
+            label: 'API',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },

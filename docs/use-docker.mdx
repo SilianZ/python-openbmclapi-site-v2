@@ -1,0 +1,43 @@
+# 使用 Docker
+
+1. 在你的机器上安装好 [Docker](https://docker.com/)。
+
+2. 拉取镜像：
+
+    ```sh
+    docker pull silianz/python-openbmclapi:latest
+    ```
+
+    :::info
+
+    你也可使用镜像源进行拉取：
+
+    ```sh
+    docker pull registry.cn-hangzhou.aliyuncs.com/silianz/python-openbmclapi:latest
+    ```
+
+    :::
+
+创建容器：
+
+```sh
+docker run -d \
+-v ${/path/to/your/cache}:/opt/python-openbmclapi/bmclapi \
+-e cluster.id=${cluster.id} \
+-e cluster.secret=${cluster.secret} \
+-e cluster.public_port=${cluster.public_port} \
+-p ${cluster.public_port}:8080 \
+--restart always \
+--name python-openbmclapi \
+silianz/python-openbmclapi 
+```
+
+**参数说明：**
+
+`web.public_port` - 对外开放的端口。
+
+`cluster.id` - 即 `CLUSTER_ID`。
+
+`cluster.secret` - 即 `CLUSTER_SECRET`。
+
+`/path/to/your/cache` - `bmclapi` 文件夹（即缓存 `cache` 文件夹）挂载的路径。
