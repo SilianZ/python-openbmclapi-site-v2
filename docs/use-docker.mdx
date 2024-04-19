@@ -18,26 +18,26 @@
 
     :::
 
-创建容器：
+3. 创建容器：
 
-```sh
-docker run -d \
--v ${/path/to/your/cache}:/opt/python-openbmclapi/bmclapi \
--e cluster.id=${cluster.id} \
--e cluster.secret=${cluster.secret} \
--e cluster.public_port=${cluster.public_port} \
--p ${cluster.public_port}:8080 \
---restart always \
---name python-openbmclapi \
-silianz/python-openbmclapi 
-```
+    ```sh
+    docker run -d \
+    -v ${/path/to/your/cache}:/opt/python-openbmclapi/bmclapi \
+    -e cluster.id=${cluster.id} \
+    -e cluster.secret=${cluster.secret} \
+    -e cluster.public_port=${cluster.public_port} \
+    -p ${cluster.public_port}:8080 \
+    --restart always \
+    --name python-openbmclapi \
+    silianz/python-openbmclapi 
+    ```
 
-**参数说明：**
+    **参数说明：**
 
-`web.public_port` - 对外开放的端口。
+    `web.public_port` - 对外开放的端口。
 
-`cluster.id` - 即 `CLUSTER_ID`。
+    `cluster.id` - 即 `CLUSTER_ID`。
 
-`cluster.secret` - 即 `CLUSTER_SECRET`。
+    `cluster.secret` - 即 `CLUSTER_SECRET`。
 
-`/path/to/your/cache` - `bmclapi` 文件夹（即缓存 `cache` 文件夹）挂载的路径。
+    `/path/to/your/cache` - `bmclapi` 文件夹（即缓存 `cache` 文件夹）挂载的路径。
