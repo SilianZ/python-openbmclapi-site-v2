@@ -1,0 +1,195 @@
+# 配置文件
+
+import "@site/src/css/table.css";
+
+这是 python-openbmclapi 的默认配置文件。
+
+```yml title="config/config.yml"
+advanced:
+  auto_update: false
+  debug: false
+  download_threads: 64
+  file_check_mode: size
+  header_bytes: 4096
+  io_buffer: 16777216
+  language: zh_cn
+  min_rate: 500
+  min_rate_timestamp: 1000
+  request_buffer: 8192
+  skip_sign: false
+  timeout: 30
+  url: https://openbmclapi.bangbang93.com/
+cache:
+  buffer: 536870912
+  check: 360
+  enable: true
+  time: 1800
+cluster:
+  byoc: false
+  enable: true
+  id: ""
+  public_host: ""
+  public_port: 8800
+  reconnect:
+    delay: 60
+    retry: -1
+  secret: ""
+  timeout:
+    enable: 120
+    keepalive: 300
+dashboard:
+  password: ""
+  username: admin
+  websocket: true
+storages:
+  bmclapi:
+    path: ./bmclapi
+    type: file
+    width: 0
+web:
+  force_ssl: false
+  port: 8080
+  server_name: TTB-Network
+  ssl_port: 8800
+  x_forwarded_for: 0
+```
+
+# 配置项
+
+## `advanced`
+
+该部分为进阶配置，仅作调试使用，在正常使用 python-openbmclapi 时**不需要**更改该部分的配置项。
+
+<div className="apiTable">
+
+| 参数                 | 类型      | 默认值                                  | 命名空间 ID                   | 是否必填 | 描述                                                            |
+| -------------------- | --------- | --------------------------------------- | ----------------------------- | -------- | --------------------------------------------------------------- |
+| `auto_update`        | `boolean` | `false`                                 | `advanced.auto_update`        | 否       | 是否启用自动更新（自动更新时会下载最新版本的 Release 压缩包）。 |
+| `debug`              | `boolean` | `false`                                 | `advanced.debug`              | 否       | 是否启用调试模式。                                              |
+| `download_threads`   | `int`     | `64`                                    | `advanced.download_threads`   | 否       | 最高下载线程。                                                  |
+| `header_bytes`       | `int`     | `4096`                                  | `advanced.header_bytes`       | 否       | 新连接读取数据头大小。                                          |
+| `io_buffer`          | `int`     | `16777216`                              | `advanced.io_buffer`          | 否       | 数据传输缓存大小。                                              |
+| `language`           | `string`  | `'zh_cn'`                               | `advanced.language`           | 否       | 语言。                                                          |
+| `min_rate`           | `int`     | `500`                                   | `advanced.min_rate`           | 否       | 最小读取速率（Bytes）。                                         |
+| `min_rate_timestamp` | `int`     | `1000`                                  | `advanced.min_rate_timestamp` | 否       | 最小读取速率时间。                                              |
+| `request_buffer`     | `int`     | `8192`                                  | `advanced.request_buffer`     | 否       | 请求缓存大小。                                                  |
+| `skip_sign`          | `boolean` | `false`                                 | `advanced.skip_sign`          | 否       | 是否跳过签名检测。                                              |
+| `timeout`            | `int`     | `30`                                    | `advanced.timeout`            | 否       | 超时时间。                                                      |
+| `url`                | `string`  | `'https://openbmclapi.bangbang93.com/'` | `advanced.url`                | 否       | OpenBMCLAPI 的 BaseURL。                                        |
+
+</div>
+
+## `cache`
+
+该部分为对文件缓存的配置。
+
+<div className="apiTable">
+
+| 参数     | 类型      | 默认值      | 命名空间 ID    | 是否必填 | 描述                     |
+| -------- | --------- | ----------- | -------------- | -------- | ------------------------ |
+| `buffer` | `int`     | `536870912` | `cache.buffer` | 否       | 缓存大小（Bytes）。      |
+| `check`  | `int`     | `360`       | `cache.check`  | 否       | 检查过时文件时间（秒）。 |
+| `enable` | `boolean` | `true`      | `cache.enable` | 否       | 是否启用缓存。           |
+| `time`   | `int`     | `1800`      | `cache.time`   | 否       | 缓存保留时间（秒）。     |
+
+</div>
+
+## `cluster`
+
+该部分为节点配置。
+
+<div className="apiTable">
+
+| 参数                | 类型      | 默认值  | 命名空间 ID                 | 是否必填 | 描述                                               |
+| ------------------- | --------- | ------- | --------------------------- | -------- | -------------------------------------------------- |
+| `byoc`              | `boolean` | `false` | `cluster.byoc`              | 否       | 是否不使用 BMCLAPI 分发的证书, 同 `CLUSTER_BYOC`。 |
+| `enable`            | `boolean` | `true`  | `cluster.enable`            | 否       | 是否启用节点。                                     |
+| `id`                | `string`  | `''`    | `cluster.id`                | 是       | OpenBMCLAPI 的 `CLUSTER_ID`。                      |
+| `public_host`       | `boolean` | `''`    | `cluster.public_host`       | 否       | 实际开放的公网主机名, 同 `CLUSTER_IP`。            |
+| `public_port`       | `int`     | `8800`  | `cluster.public_port`       | 否       | 实际开放的公网端口, 同 `CLUSTER_PUBLIC_PORT`。     |
+| `reconnect.delay`   | `int`     | `60`    | `cluster.reconnect.delay`   | 否       | 重连间隔。                                         |
+| `reconnect.retry`   | `int`     | `-1`    | `cluster.reconnect.retry`   | 否       | 重连次数，`-1` 为无限次数。                        |
+| `secret`            | `string`  | `''`    | `cluster.secret`            | 是       | OpenBMCLAPI 的 `CLUSTER_SECRET`。                  |
+| `timeout.enable`    | `int`     | `120`   | `cluster.timeout.enable`    | 否       | 发送启用数据包超时时间。                           |
+| `timeout.keepalive` | `int`     | `300`   | `cluster.timeout.keepalive` | 否       | 发送保活数据包超时时间。                           |
+
+</div>
+
+## `dashboard`
+
+该部分为仪表盘配置。
+
+<div className="apiTable">
+
+| 参数        | 类型      | 默认值      | 命名空间 ID           | 是否必填 | 说明                                       |
+| ----------- | --------- | ----------- | --------------------- | -------- | ------------------------------------------ |
+| `password`  | `string`  | `undefined` | `dashboard.password`  | 否       | 仪表盘的密码（若未配置程序会自动生成）。 |
+| `username`  | `string`  | `'admin'`   | `dashboard.username`  | 否       | 仪表盘用户名。                             |
+| `websocket` | `boolean` | `true`      | `dashboard.websocket` | 否       | 是否启用 WebSocket。                       |
+
+</div>
+
+## `storages`
+
+该部分为储存配置。
+
+储存类型分为两种：`file`（本地存储）和 `webdav`（WebDAV）。
+
+### 使用本地储存
+
+```yml title="config/config.yml" {3}
+bmclapi: # 你的存储名字，可以使用任何英文名称
+  path: ./bmclapi 
+  type: file 
+  width: 0
+```
+
+<div className="apiTable">
+
+| 参数    | 类型     | 是否必填 | 说明                                                         |
+| ------- | -------- | -------- | ------------------------------------------------------------ |
+| `path`  | `string` | 是       | 存储路径。                                                   |
+| `type`  | `string` | 是       | 储存类型，可选值为 `file`（本地存储）和 `webdav`（WebDAV）。 |
+| `width` | `int`    | 是       | 选用存储下载权重，`-1` 为禁用，不选择，但会下载文件。        |
+
+</div>
+
+### 使用 WebDAV 储存
+
+```yml title="config/config.yml" {3,5-7}
+bmclapi_webdav: 
+  path: /bmclapidev
+  type: webdav
+  width: 2 
+  endpoint: http://localhost:5244/dav
+  username: user
+  password: password
+```
+
+<div className="apiTable">
+
+| 参数       | 类型     | 是否必填 | 说明                                                         |
+| ---------- | -------- | -------- | ------------------------------------------------------------ |
+| `path`     | `string` | 是       | 存储路径。                                                   |
+| `type`     | `string` | 是       | 储存类型，可选值为 `file`（本地存储）和 `webdav`（WebDAV）。 |
+| `width`    | `int`    | 是       | 选用存储下载权重，`-1` 为禁用，不选择，但会下载文件。        |
+| `endpoint` | `string` | 是       | 你的 WebDAV 端点。                                           |
+| `username` | `string` | 是       | WebDAV 用户名。                                              |
+| `password` | `string` | 是       | WebDAV 用户密码。                                            |
+
+</div>
+
+## `web`
+
+该部分为 Web 相关的配置。
+
+<div className="apiTable">
+
+| 参数          | 类型      | 默认值        | 命名空间 ID       | 是否必填 | 描述                                  |
+| ------------- | --------- | ------------- | ----------------- | -------- | ------------------------------------- |
+| `force_ssl`   | `boolean` | `false`       | `web.force_ssl`   | 否       | 是否强制使用 SSL。                    |
+| `port`        | `int`     | `8080`        | `web.port`        | 否       | 要监听的本地端口, 同 `CLUSTER_PORT`。 |
+| `server_name` | `string`  | `TTB-Network` | `web.server_name` | 否       | 服务器名字。                          |
+| `ssl_port`    | `int`     | `8800`        | `web.ssl_port`    | 否       | SSL 端口。                            |
+
+</div>

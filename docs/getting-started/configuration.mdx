@@ -23,20 +23,18 @@ import Asciinema from "@site/src/components/Asciinema";
     }}
     />
 
-    如果你看到以下报错信息：`core.exceptions.ClusterIdNotSet`，那么你就可以进行下一步的配置。
+    如果你看到以下报错信息：`core.exceptions.ClusterIdNotSet`，恭喜你！你可以进行下一步的配置了。
 
 2. 在 `config/config.yml` 中，填写你的 `id`（即 `CLUSTER_ID`）和 `secret`（即 `CLUSTER_SECRET`）。
 
-    ```yml title="config/config.yml" {4,7}
-    ...
+    ```yml title="config/config.yml" {3,6}
     cluster:
-    byoc: false
-    id: abcdefghijklmn # OpenBMCLAPI 的 CLUSTER_ID
-    public_host: ''
-    ...
-    secret: # OpenBMCLAPI 的 CLUSTER_SECRET
-    skip_sign: false
-    ...
+      byoc: false
+      id: '' # OpenBMCLAPI 的 CLUSTER_ID
+      public_host: ''
+      ...
+      secret: '' # OpenBMCLAPI 的 CLUSTER_SECRET
+      skip_sign: false
     ```
 
 3. 重新启动程序以应用最新配置。
