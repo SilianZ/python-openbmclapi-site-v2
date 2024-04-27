@@ -1,41 +1,53 @@
-# Website
+# Python OpenBMCLAPI Site
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+[Python OpenBMCLAPI](https://github.com/TTB-Network/python-openbmclapi) 的帮助文档。
 
-### Installation
+此网站使用 [Docusaurus v3](https://docusaurus.io/) 构建，Docusaurus 是一个静态网站生成器。
+
+## 安装
 
 ```
 $ yarn
 ```
 
-### Local Development
+## 本地开发
 
 ```
 $ yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+此命令启动本地开发服务器并打开浏览器窗口。大多数更改都是实时更新的，你不需要重新启动服务器。
 
-### Build
+## 构建
 
 ```
 $ yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+此命令将静态内容生成到 `build` 目录中，并且可以使用任何静态内容托管服务来运行。
 
-### Deployment
+## 部署
 
-Using SSH:
+### GitHub Pages
+
+使用 SSH：
 
 ```
 $ USE_SSH=true yarn deploy
 ```
 
-Not using SSH:
+不使用 SSH：
 
 ```
 $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+如果你使用 GitHub Pages 进行托管，此命令是构建网站并推送到 `gh pages` 分支的方法。
+
+### Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTTB-Network%2Fpython-openbmclapi-site)
+
+### Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2FTTB-Network%2Fpython-openbmclapi-site)
