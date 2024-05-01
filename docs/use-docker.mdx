@@ -51,3 +51,26 @@
     ```
 
     :::
+    
+    :::tip 命名空间 ID
+
+    命名空间 ID 是将配置项传入 Docker 容器的一种方法。
+
+    ```yml title="config/config.yml"
+    dashboard:
+      password: ""
+      username: admin
+      websocket: true
+    ```
+
+    这是一段示例的配置项，将这些配置项转化为命名空间 ID 分别为：
+
+    ```properties
+    dashboard.password=""
+    dashboard.user=admin
+    dashboard.websocker=true
+    ```
+
+    在转化配置项为命名空间 ID 时，使用 `.` 连接配置项的键与值。
+
+    :::

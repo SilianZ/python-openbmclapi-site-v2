@@ -103,7 +103,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.okaidia,
-        additionalLanguages: ['bash', 'diff', 'json', 'python', 'powershell', 'yaml']
+        additionalLanguages: ['bash', 'diff', 'json', 'python', 'powershell', 'yaml', 'properties']
       },
       algolia: {
         appId: '6DIHTRUAUN',
