@@ -2,6 +2,8 @@
 title: 主页
 ---
 
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Link from "@docusaurus/Link";
 import styles from "./index.module.css";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
@@ -26,3 +28,5 @@ import Heading from "@theme/Heading";
     </div>
 </div>
 <HomepageFeatures />
+<Analytics />
+<SpeedInsights />
