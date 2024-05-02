@@ -10,28 +10,6 @@ import Asciinema from "@site/src/components/Asciinema";
 
 如果你想使用 Docker，请转到[使用 Docker](/docs/use-docker)。
 
-## 从 systemd 运行
-
-1. 运行安装脚本
-
-```sh
-curl -fsSL https://ghproxy.bugungu.top/https://raw.githubusercontent.com/TTB-Network/python-openbmclapi/master/installer/installer.sh | sudo bash -s
-```
-
-2. 根据[配置文件](/docs/advanced/configuration)编辑 `/opt/py-openbmclapi/config/config.yml`。
-
-3. 重新启动程序：
-
-    ```sh
-    systemctl reload py-openbmclapi.service
-    ```
-
-**相关命令：**
-`systemctl start py-openbmclapi.service` - 启动 python-openbmclapi 服务。
-`systemctl stop py-openbmclapi.service` - 关闭 python-openbmclapi 服务。
-`systemctl reload py-openbmclapi.service` - 重新启动 python-openbmclapi 服务以应用最新配置。
-`journalctl -f --output cat -u py-openbmclapi.service` - 实时查看 python-openbmclapi 的日志。
-
 ## 手动安装
 
 1. 在你的机器上安装好 [Python](https://www.python.org/)。
@@ -59,12 +37,16 @@ curl -fsSL https://ghproxy.bugungu.top/https://raw.githubusercontent.com/TTB-Net
     1. 克隆仓库：
 
         ```sh
-        git clone https://github.com/tianxiu2b2t/python-openbmclapi.git
+        git clone https://github.com/TTB-Network/python-openbmclapi.git
         ```
 
-        :::info
+        :::tip
 
-        仓库镜像地址（长期未更新）：https://gitee.com/ttb-network/python-openbmclapi
+        你亦可以使用镜像源加速：
+
+        ```sh
+        git clone https://ghproxy.bugungu.top/https://github.com/TTB-Network/python-openbmclapi.git
+        ```
 
         :::
 
