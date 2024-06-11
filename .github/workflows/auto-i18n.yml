@@ -2,8 +2,12 @@ name: 自动 i18n
 
 on:
   push:
+    paths:
+      - '**.mdx'
+      - '**.js'
     branches:
       - main
+      
 jobs:
   update_i18n:
     runs-on: ubuntu-latest
