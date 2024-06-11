@@ -1,0 +1,8 @@
+advanced:
+  label: '进阶'
+  permalink: '/advanced'
+  description: '进阶文档。'
+introduction:
+  label: '介绍'
+  permalink: '/introductions'
+  description: '介绍文档。'
