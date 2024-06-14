@@ -5,7 +5,3 @@ files:
     ignore:
       - '**.json'
     translation: /i18n/%language%/docusaurus-plugin-content-docs/current/**/%original_file_name%
-  - source: /src/pages/**/*
-    ignore:
-      - '**.css'
-    translation: /i18n/%language%/docusaurus-plugin-content-pages/**/%original_file_name%
