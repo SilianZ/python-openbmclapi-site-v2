@@ -54,7 +54,7 @@
 .heroLogo {
   animation-duration: 2s;
   animation-name: jack-in-the-box;
-  margin-top: 10px;
+  margin-top: 0;
   float: right;
   padding: 0 10px 10px;
   height: auto;
@@ -63,7 +63,7 @@
 .buttons {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
   justify-content: center;
   flex-wrap: wrap;
   --ifm-button-size-multiplier: 1.6;
