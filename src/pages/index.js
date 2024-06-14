@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className={styles.heroInner}>
           <Heading as="h1" className={styles.heroProjectTagline}>
             <img
-              width="350"
+              width="300"
               className={styles.heroLogo}
               src="./img/logo.svg"
               alt="logo"
