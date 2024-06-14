@@ -5,7 +5,7 @@ import Link from "@docusaurus/Link";
 import styles from "./index.module.css";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import React from "react";
 
 export default function HomePage() {
@@ -20,11 +20,16 @@ export default function HomePage() {
               src="./img/logo.svg"
               alt="logo"
             />
-            <div className={styles.heroTitle}>
-              <Translate id="homepage.title">
-                <b>跨系统</b>、<b>轻量</b>的 OpenBMCLAPI Python 版本
-              </Translate>
-            </div>
+            <div
+                className={styles.heroTitle}
+                dangerouslySetInnerHTML={{
+                    __html: translate({
+                    id: 'homepage.title',
+                    message:
+                        '<b>跨系统</b>、<b>轻量</b>的 OpenBMCLAPI Python 版本',
+                    }),
+                }}
+            />
           </Heading>
           <div className={styles.buttons}>
             <Link className="button button--primary" to="/docs/introduction">
