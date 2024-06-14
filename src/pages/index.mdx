@@ -8,6 +8,7 @@ import Link from "@docusaurus/Link";
 import styles from "./index.module.css";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
+import Translate from '@docusaurus/Translate';
 
 <div className={styles.hero}>
     <div className={styles.heroInner}>
@@ -19,11 +20,11 @@ import Heading from "@theme/Heading";
                 alt="logo"
             />
             <div className={styles.heroTitle}>
-                <b>跨系统</b>、<b>轻量</b>的 OpenBMCLAPI Python 版本
+                <Translate id="homepage.title"><b>跨系统</b>、<b>轻量</b>的 OpenBMCLAPI Python 版本</Translate>
             </div>
         </Heading>
         <div className={styles.buttons}>
-            <Link className="button button--primary" to="/docs/introduction"> 快速开始 ⚡ </Link>
+            <Link className="button button--primary" to="/docs/introduction"> <Translate id="homepage.button">快速开始 ⚡ </Link></Translate>
         </div>
     </div>
 </div>
