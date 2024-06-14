@@ -23,6 +23,7 @@
 .heroProjectTagline {
   font-size: 55px;
   text-align: center;
+  word-break: break-all;
   margin: 0;
 }
 
@@ -88,6 +89,7 @@
 
   .heroProjectTagline {
       font-size: 30px;
+      word-break: break-all;
       text-align: center;
   }
 
@@ -97,11 +99,11 @@
       margin: 0 auto;
   }
 
-    .buttons {
-        justify-content: center;
-    }
+  .buttons {
+      justify-content: center;
+  }
 
-    .buttons a {
-        margin: 20px 10px;
-    }
+  .buttons a {
+      margin: 20px 10px;
+  }
 }
