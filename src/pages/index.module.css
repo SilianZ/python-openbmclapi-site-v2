@@ -54,8 +54,9 @@
 .heroLogo {
   animation-duration: 2s;
   animation-name: jack-in-the-box;
-  margin-top: 10px;
-  padding: 0 10px 10px;
+  margin-top: 20px;
+  float: right;
+  padding: 0 20px 20px;
   height: auto;
 }
 
@@ -63,9 +64,13 @@
   display: flex;
   align-items: center;
   margin-top: 30px;
-  justify-content: center;
+  flex-wrap: wrap;
   --ifm-button-size-multiplier: 1.6;
   font-size: 50px;
+}
+
+.buttons a:last-of-type {
+    margin: 20px 10px;
 }
 
 @media screen and (max-width: 1065px) {
