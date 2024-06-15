@@ -65,6 +65,12 @@ const config = {
           {
             type: 'localeDropdown',
             position: 'right',
+            dropdownItemsAfter: [
+              {
+                to: 'https://translate.bugungu.top',
+                label: '帮助我们翻译',
+              },
+            ],
           },
           {
             href: 'https://github.com/TTB-Network/python-openbmclapi',
@@ -83,6 +89,14 @@ const config = {
                 label: '简介',
                 to: '/docs/introduction',
               },
+              {
+                label: '快速上手',
+                to: '/docs/getting-started/use-systemd'
+              },
+              {
+                label: '配置文件',
+                to: '/docs/advanced/configuration',
+              },        
             ],
           },
           {
@@ -95,13 +109,18 @@ const config = {
             ],
           },
         ],
+        logo: {
+          alt: 'Python OpenBMCLAPI Logo',
+          src: 'img/logo-full.svg',
+          href: 'https://github.com/TTB-Network/python-openbmclapi',
+        },
         copyright: 
         `版权所有 © ${new Date().getFullYear()} TTB-Network。使用 <a href="https://docusaurus.io">Docusaurus</a> 构建。除非另有声明，本网站内容采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0</a> 授权。`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.okaidia,
-        additionalLanguages: ['bash', 'diff', 'json', 'python', 'powershell', 'yaml', 'properties']
+        additionalLanguages: ['bash', 'diff', 'json', 'python', 'powershell', 'yaml', 'properties'],
       },
       algolia: {
         appId: '6DIHTRUAUN',
