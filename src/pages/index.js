@@ -32,8 +32,11 @@ export default function HomePage() {
             />
           </Heading>
           <div className={styles.buttons}>
-            <Link className="button button--primary" to="/docs/introduction">
-              <Translate id="homepage.button">快速开始 ⚡ </Translate>
+            <Link className="button button--primary" to="/docs/getting-started/use-systemd">
+              <Translate id="homepage.button.quick-start"> 快速开始 ⚡ </Translate>
+            </Link>
+            <Link className="button button--info" to="/docs">
+              <Translate id="homepage.button.info"> 了解更多 </Translate>
             </Link>
           </div>
         </div>
