@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className={styles.heroInner}>
           <Heading as="h1" className={styles.heroProjectTagline}>
             <img
-              width="250"
+              width="300"
               className={styles.heroLogo}
               src="./img/logo.svg"
               alt="logo"
@@ -33,7 +33,7 @@ export default function HomePage() {
           </Heading>
           <div className={styles.buttons}>
             <Link className="button button--primary" to="/docs/getting-started/use-systemd">
-              <Translate id="homepage.button.quick-start"> 快速开始 ⚡ </Translate>
+              <Translate id="homepage.button.quick-start"> 快速开始 </Translate>
             </Link>
             <Link className="button button--info" to="/docs/introduction">
               <Translate id="homepage.button.info"> 了解更多 </Translate>
