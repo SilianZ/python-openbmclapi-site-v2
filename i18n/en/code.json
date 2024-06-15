@@ -2,8 +2,11 @@
   "homepage.title": {
     "message": "<b>跨系统</b>、<b>轻量</b>的 OpenBMCLAPI Python 版本"
   },
-  "homepage.button": {
+  "homepage.button.quick-start": {
     "message": "快速开始 ⚡"
+  },
+  "homepage.button.info": {
+    "message": "了解更多"
   },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
