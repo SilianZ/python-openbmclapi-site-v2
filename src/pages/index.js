@@ -26,7 +26,9 @@ export default function HomePage() {
                     __html: translate({
                     id: 'homepage.title',
                     message:
-                        '<b>跨系统</b>、<b>轻量</b>的 OpenBMCLAPI Python 版本',
+                        `<b>跨系统</b>、<b>轻量</b>的
+                        OpenBMCLAPI
+                         Python 版本`,
                     }),
                 }}
             />
