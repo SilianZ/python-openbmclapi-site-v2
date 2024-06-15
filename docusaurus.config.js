@@ -67,7 +67,11 @@ const config = {
             position: 'right',
             dropdownItemsAfter: [
               {
-                to: 'https://translate.bugungu.top',
+                type: 'html',
+                value: '<hr style="margin: 0.3rem 0;">',
+              },
+              {
+                href: 'https://translate.bugungu.top',
                 label: '帮助我们翻译',
               },
             ],
