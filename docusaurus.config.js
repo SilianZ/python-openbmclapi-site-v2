@@ -91,7 +91,7 @@ const config = {
             items: [
               {
                 label: '简介',
-                to: '/docs/introduction',
+                to: '/docs',
               },
               {
                 label: '快速上手',
