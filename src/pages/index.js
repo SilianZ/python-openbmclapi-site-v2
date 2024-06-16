@@ -9,8 +9,9 @@ import Translate, { translate } from "@docusaurus/Translate";
 import React from "react";
 
 export default function HomePage() {
+  const title = translate({ message: '主页', id: 'homepage' })
   return (
-    <Layout title="主页">
+    <Layout title={title}>
       <div className={styles.hero}>
         <div className={styles.heroInner}>
           <Heading as="h1" className={styles.heroProjectTagline}>
