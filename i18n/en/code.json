@@ -9,7 +9,7 @@
     "message": "Learn More"
   },
   "homepage.feature.easy-to-use.title": {
-    "message": "轻易上手"
+    "message": "Easy to use"
   },
   "homepage.feature.easy-to-use.description": {
     "message": "为了更快地开发和部署，我们准备了文档以及 Docker 镜像，同时也搭建了相应的镜像站来加快访问速度。"
