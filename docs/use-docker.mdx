@@ -1,8 +1,6 @@
 ---
-id: use-docker
+title: 使用 Docker
 ---
-
-# 使用 Docker {use-docker}
 
 1. 在你的机器上安装好 [Docker](https://docker.com/)。
 
@@ -46,6 +44,7 @@ id: use-docker
 
     `cluster.secret` - 即 `CLUSTER_SECRET`。
 
+```mdx-code-block
     :::info
     
     其他配置参数请参见[配置文件](/docs/advanced/configuration)，请使用**命名空间 ID** 将相应的配置项作为环境变量传入到 Docker 容器中。
@@ -57,7 +56,9 @@ id: use-docker
     ```
 
     :::
-    
+```
+
+```mdx-code-block    
     :::tip 命名空间 ID
 
     命名空间 ID 是将配置项传入 Docker 容器的一种方法。
@@ -80,3 +81,4 @@ id: use-docker
     在转化配置项为命名空间 ID 时，使用 `.` 连接配置项的键与值。
 
     :::
+```
