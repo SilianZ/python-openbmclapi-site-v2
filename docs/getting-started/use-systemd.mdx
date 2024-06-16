@@ -12,14 +12,14 @@ import Asciinema from "@site/src/components/Asciinema";
 
 如果你想使用 Docker，请转到[使用 Docker](/docs/use-docker)。
 
-## 准备
+## 准备 {prepare}
 
 在使用一键脚本前，请确保你已做好以下准备：
 
 - 确保 systemd 是您的启动进程
 - [Python](https://www.python.org/) 环境（版本：3.10+）
 
-## 安装
+## 安装 {installation}
 
 运行安装脚本：
 
@@ -52,7 +52,7 @@ options={{
 />
 ```
 
-## 配置
+## 配置 {configuration}
 
 1. 在 `/opt/python-openbmclapi/config/config.yml` 中，填写你的 `id`（即 `CLUSTER_ID`）和 `secret`（即 `CLUSTER_SECRET`）。
 
@@ -72,7 +72,7 @@ options={{
     systemctl reload python-openbmclapi.service
     ```
 
-## 相关命令
+## 相关命令 {commands}
 
 `systemctl start python-openbmclapi.service` - 启动 python-openbmclapi 服务。
 
