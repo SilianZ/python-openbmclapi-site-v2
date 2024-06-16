@@ -1,0 +1,34 @@
+{
+  "link.title.文档": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=文档 in the footer"
+  },
+  "link.title.社区": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=社区 in the footer"
+  },
+  "link.item.label.简介": {
+    "message": "Introduction",
+    "description": "The label of footer link with label=简介 linking to /docs/introduction"
+  },
+  "link.item.label.快速上手": {
+    "message": "Getting Started",
+    "description": "The label of footer link with label=快速上手 linking to /docs/getting-started/use-systemd"
+  },
+  "link.item.label.配置文件": {
+    "message": "Configuration",
+    "description": "The label of footer link with label=配置文件 linking to /docs/advanced/configuration"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/TTB-Network/python-openbmclapi-site"
+  },
+  "copyright": {
+    "message": "Copyright © 2024 TTB-Network. Build with <a href=\"https://docusaurus.io\">Docusaurus</a>. Unless otherwise declared, this site's content is licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Attribution-ShareAlike 4.0 International</a>.",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "Python OpenBMCLAPI Logo",
+    "description": "The alt text of footer logo"
+  }
+}
