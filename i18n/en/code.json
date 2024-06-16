@@ -1,4 +1,7 @@
 {
+  "homepage": {
+    "message": "主页"
+  },
   "homepage.title": {
     "message": "<b>Cross-System</b> and <b>lightweight</b> OpenBMCLAPI Python version"
   },
