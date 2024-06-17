@@ -10,7 +10,7 @@ title: 使用 Docker
     docker pull silianz/python-openbmclapi:latest
     ```
 
-```mdx-code-block
+````mdx-code-block
     :::info
 
     你也可使用镜像源进行拉取：
@@ -20,7 +20,7 @@ title: 使用 Docker
     ```
 
     :::
-```
+````
 
 3. 创建容器：
 
@@ -44,7 +44,7 @@ title: 使用 Docker
 
     `cluster.secret` - 即 `CLUSTER_SECRET`。
 
-```mdx-code-block
+````mdx-code-block
     :::info
     
     其他配置参数请参见[配置文件](/docs/advanced/configuration)，请使用**命名空间 ID** 将相应的配置项作为环境变量传入到 Docker 容器中。
@@ -56,9 +56,9 @@ title: 使用 Docker
     ```
 
     :::
-```
+````
 
-```mdx-code-block    
+````mdx-code-block    
     :::tip 命名空间 ID
 
     命名空间 ID 是将配置项传入 Docker 容器的一种方法。
@@ -81,4 +81,4 @@ title: 使用 Docker
     在转化配置项为命名空间 ID 时，使用 `.` 连接配置项的键与值。
 
     :::
-```
+````
