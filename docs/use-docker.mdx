@@ -1,8 +1,6 @@
 ---
-tags: [installation]
+title: 使用 Docker
 ---
-
-# 使用 Docker
 
 1. 在你的机器上安装好 [Docker](https://docker.com/)。
 
@@ -12,6 +10,7 @@ tags: [installation]
     docker pull silianz/python-openbmclapi:latest
     ```
 
+````mdx-code-block
     :::info
 
     你也可使用镜像源进行拉取：
@@ -21,6 +20,7 @@ tags: [installation]
     ```
 
     :::
+````
 
 3. 创建容器：
 
@@ -44,6 +44,7 @@ tags: [installation]
 
     `cluster.secret` - 即 `CLUSTER_SECRET`。
 
+````mdx-code-block
     :::info
     
     其他配置参数请参见[配置文件](/docs/advanced/configuration)，请使用**命名空间 ID** 将相应的配置项作为环境变量传入到 Docker 容器中。
@@ -55,7 +56,9 @@ tags: [installation]
     ```
 
     :::
-    
+````
+
+````mdx-code-block    
     :::tip 命名空间 ID
 
     命名空间 ID 是将配置项传入 Docker 容器的一种方法。
@@ -78,3 +81,4 @@ tags: [installation]
     在转化配置项为命名空间 ID 时，使用 `.` 连接配置项的键与值。
 
     :::
+````

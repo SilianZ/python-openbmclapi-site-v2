@@ -9,8 +9,9 @@ import Translate, { translate } from "@docusaurus/Translate";
 import React from "react";
 
 export default function HomePage() {
+  const title = translate({ message: '主页', id: 'homepage' })
   return (
-    <Layout title="主页">
+    <Layout title={title}>
       <div className={styles.hero}>
         <div className={styles.heroInner}>
           <Heading as="h1" className={styles.heroProjectTagline}>
@@ -35,7 +36,7 @@ export default function HomePage() {
             <Link className="button button--primary" to="/docs/getting-started/use-systemd">
               <Translate id="homepage.button.quick-start"> 快速开始 </Translate>
             </Link>
-            <Link className="button button--info" to="/docs/introduction">
+            <Link className="button button--info" to="/docs">
               <Translate id="homepage.button.info"> 了解更多 </Translate>
             </Link>
           </div>

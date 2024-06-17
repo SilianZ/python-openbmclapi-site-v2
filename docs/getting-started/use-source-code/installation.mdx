@@ -1,33 +1,34 @@
 ---
-id: installation
+title: 安装
+sidebar_position: 1
 ---
 
-# 安装
-
-如果你想使用 Docker，请转到[使用 Docker](/docs/use-docker)。
-
-```mdx-code-block
+````mdx-code-block
 import Tabs from "@theme/Tabs"
 import TabItem from "@theme/TabItem"
 import Asciinema from "@site/src/components/Asciinema";
-```
+````
 
-## 手动安装
+如果你想使用 Docker，请转到[使用 Docker](/docs/use-docker)。
+
+## 手动安装 {#install-manually}
 
 1. 在你的机器上安装好 [Python](https://www.python.org/)。
 
+````mdx-code-block
     :::info
 
     建议 Python 版本：3.10+。
 
     :::
+````
 
 2. 下载源码：
 
-```mdx-code-block
+````mdx-code-block
     <Tabs>
     <TabItem value="c1" label="下载 Release" default>
-```
+````
 
     1. 从 [Releases](https://github.com/TTB-Network/python-openbmclapi/releases) 中下载代码。
 
@@ -35,10 +36,10 @@ import Asciinema from "@site/src/components/Asciinema";
 
     3. 在文件夹中打开终端。
 
-```mdx-code-block
+````mdx-code-block
     </TabItem>
     <TabItem value="c2" label="使用 Git 克隆">
-```
+````
 
     1. 克隆仓库：
 
@@ -46,6 +47,7 @@ import Asciinema from "@site/src/components/Asciinema";
         git clone https://github.com/TTB-Network/python-openbmclapi.git
         ```
 
+````mdx-code-block
         :::tip
 
         你亦可以使用镜像源加速：
@@ -55,6 +57,7 @@ import Asciinema from "@site/src/components/Asciinema";
         ```
 
         :::
+````
 
     2. 打开仓库所在文件夹：
 
@@ -62,7 +65,7 @@ import Asciinema from "@site/src/components/Asciinema";
         cd python-openbmclapi
         ```
 
-```mdx-code-block
+````mdx-code-block
     <Asciinema
     url="https://asciinema.org/a/655199.cast"
     options={{
@@ -77,7 +80,7 @@ import Asciinema from "@site/src/components/Asciinema";
     </TabItem>
     </Tabs>
 
-```
+````
 
 3. 安装依赖：
 
@@ -85,13 +88,15 @@ import Asciinema from "@site/src/components/Asciinema";
     pip install -r requirements.txt
     ```
 
+````mdx-code-block
     :::tip
 
     你可能需要先安装 [Microsoft C++ 生成工具](https://visualstudio.microsoft.com/visual-cpp-build-tools/)。
 
     :::
+````
 
-```mdx-code-block
+````mdx-code-block
     <Asciinema
     url="https://asciinema.org/a/655200.cast"
     options={{
@@ -102,4 +107,4 @@ import Asciinema from "@site/src/components/Asciinema";
         idleTimeLimit: 0.2,
     }}
     />
-```
+````

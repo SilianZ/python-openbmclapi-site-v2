@@ -1,4 +1,7 @@
 {
+  "homepage": {
+    "message": "主页"
+  },
   "homepage.title": {
     "message": "<b>跨系统</b>、<b>轻量</b>的 OpenBMCLAPI Python 版本"
   },
@@ -7,6 +10,24 @@
   },
   "homepage.button.info": {
     "message": "了解更多"
+  },
+  "homepage.feature.easy-to-use.title": {
+    "message": "轻易上手"
+  },
+  "homepage.feature.easy-to-use.description": {
+    "message": "为了更快地开发和部署，我们准备了文档以及 Docker 镜像，同时也搭建了相应的镜像站来加快访问速度。"
+  },
+  "homepage.feature.expandable.title": {
+    "message": "可拓展化"
+  },
+  "homepage.feature.expandable.description": {
+    "message": "我们提供了插件拓展功能，你可以为 python-openbmclapi 编写自己的插件。"
+  },
+  "homepage.feature.lightweight.title": {
+    "message": "轻量化"
+  },
+  "homepage.feature.lightweight.description": {
+    "message": "基于 Python 强大的语言功能，编写出来的 python-openbmclapi 可以减小空间和内存的占用。"
   },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
