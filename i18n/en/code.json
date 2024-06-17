@@ -1,4 +1,7 @@
 {
+  "homepage": {
+    "message": "Home"
+  },
   "homepage.title": {
     "message": "<b>Cross-System</b> and <b>lightweight</b> OpenBMCLAPI Python version"
   },
@@ -7,6 +10,24 @@
   },
   "homepage.button.info": {
     "message": "Learn More"
+  },
+  "homepage.feature.easy-to-use.title": {
+    "message": "Easy to use"
+  },
+  "homepage.feature.easy-to-use.description": {
+    "message": "To develop and deploy quickly, we have prepared documents and Docker images, and set up mirrors to speed up access."
+  },
+  "homepage.feature.expandable.title": {
+    "message": "Expandable"
+  },
+  "homepage.feature.expandable.description": {
+    "message": "We offer plugin extension that you can write your own plugin for python-openbmclapi."
+  },
+  "homepage.feature.lightweight.title": {
+    "message": "Lightweight"
+  },
+  "homepage.feature.lightweight.description": {
+    "message": "Written python-openbmclapi based on the powerful language function of Python reduces usage of space and memory."
   },
   "theme.ErrorPageContent.title": {
     "message": "The page crashed.",
