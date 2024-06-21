@@ -3,7 +3,7 @@ name: 自动 i18n
 on:
   push:
     paths:
-      - '**.mdx'
+      - '**.json'
       - '**.js'
     branches:
       - main
