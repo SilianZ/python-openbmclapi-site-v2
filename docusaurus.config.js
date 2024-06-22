@@ -116,7 +116,7 @@ const config = {
             title: '更多',
             items: [
               {
-                html: '<p>Deploy with <a href="https://vercel.com/"><img height="16" src="./img/vercel-logo.svg" /></a>.</p>',
+                html: '<p>Deploy with <a href="https://vercel.com/"><img height="22" src="./img/vercel-logo.svg" /></a></p>',
               },
             ],
           },
