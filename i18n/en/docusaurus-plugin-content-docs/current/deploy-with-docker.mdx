@@ -1,10 +1,10 @@
 ---
-title: 使用 Docker
+title: Using Docker
 ---
 
-1. 在你的机器上安装好 [Docker](https://docker.com/)。
+1. Install [Docker](https://docker.com/) on your machine.
 
-2. 拉取镜像：
+2. Pull image：
 
     ```sh
     docker pull silianz/python-openbmclapi:latest
@@ -12,7 +12,7 @@ title: 使用 Docker
 
     ::::info
 
-    你也可使用镜像源进行拉取：
+    You can also pull with mirror sources:
 
     ```sh
     docker pull registry.cn-hangzhou.aliyuncs.com/silianz/python-openbmclapi:latest
@@ -21,7 +21,7 @@ title: 使用 Docker
     :
 :::
 
-3. 创建容器：
+3. Create a container:
 
     ```sh
     docker run -d \
@@ -35,13 +35,13 @@ title: 使用 Docker
     silianz/python-openbmclapi 
     ```
 
-    **参数说明：**
+    **Parameter description:**
 
-    `cluster.public_port` - 对外开放的端口。
+    `cluster.public_port` - Port open to others.
 
-    `cluster.id` - 即 `CLUSTER_ID`。
+    `cluster.id` - i.e. `CLUSTER_ID`.
 
-    `cluster.secret` - 即 `CLUSTER_SECRET`。
+    `cluster.secret` - i.e. `CLUSTER_SECRET`.
 
 ::::info
 
