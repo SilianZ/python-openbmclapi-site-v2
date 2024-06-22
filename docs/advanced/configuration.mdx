@@ -68,7 +68,6 @@ web:
 
 该部分为进阶配置，仅作调试使用，在正常使用 python-openbmclapi 时**不需要**更改该部分的配置项。
 
-````mdx-code-block
 <div className="apiTable">
 
 | 参数                      | 类型      | 默认值                                  | 是否必填 | 描述                                                         |
@@ -88,13 +87,12 @@ web:
 | `url`                     | `string`  | `'https://openbmclapi.bangbang93.com/'` | 否       | OpenBMCLAPI 的 BaseURL。                                     |
 
 </div>
-````
+
 
 ### `cache` {#cache}
 
 该部分为对文件缓存的配置。
 
-````mdx-code-block
 <div className="apiTable">
 
 | 参数     | 类型      | 默认值      | 是否必填 | 描述                     |
@@ -105,13 +103,11 @@ web:
 | `time`   | `int`     | `1800`      | 否       | 缓存保留时间（秒）。     |
 
 </div>
-````
 
 ### `cluster` {#cluster}
 
 该部分为节点配置。
 
-````mdx-code-block
 <div className="apiTable">
 
 | 参数                | 类型      | 默认值  | 是否必填 | 描述                                               |
@@ -128,13 +124,11 @@ web:
 | `timeout.keepalive` | `int`     | `300`   | 否       | 发送保活数据包超时时间。                           |
 
 </div>
-````
 
 ### `dashboard` {#dashboard}
 
 该部分为仪表盘配置。
 
-````mdx-code-block
 <div className="apiTable">
 
 | 参数        | 类型      | 默认值      | 是否必填 | 说明                                     |
@@ -144,7 +138,6 @@ web:
 | `websocket` | `boolean` | `true`      | 否       | 是否启用 WebSocket。                     |
 
 </div>
-````
 
 ### `storages` {#storages}
 
@@ -161,7 +154,6 @@ bmclapi: # 你的存储名字，可以使用任何英文名称
   width: 0
 ```
 
-````mdx-code-block
 <div className="apiTable">
 
 | 参数    | 类型     | 是否必填 | 说明                                                         |
@@ -171,7 +163,6 @@ bmclapi: # 你的存储名字，可以使用任何英文名称
 | `width` | `int`    | 是       | 选用存储下载权重，`-1` 为禁用，不选择，但会下载文件。        |
 
 </div>
-````
 
 #### 使用 WebDAV 储存
 
@@ -185,7 +176,6 @@ bmclapi_webdav:
   password: password
 ```
 
-````mdx-code-block
 <div className="apiTable">
 
 | 参数       | 类型     | 是否必填 | 说明                                                         |
@@ -198,13 +188,11 @@ bmclapi_webdav:
 | `password` | `string` | 是       | WebDAV 用户密码。                                            |
 
 </div>
-````
 
 ### `web` {#web}
 
 该部分为 Web 相关的配置。
 
-````mdx-code-block
 <div className="apiTable">
 
 | 参数          | 类型      | 默认值        | 是否必填 |
@@ -214,4 +202,4 @@ bmclapi_webdav:
 | `server_name` | `string`  | `TTB-Network` | 否       |
 
 </div>
-````
+
