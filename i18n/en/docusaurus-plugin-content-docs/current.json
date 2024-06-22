@@ -4,19 +4,19 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.快速上手": {
-    "message": "快速上手",
+    "message": "Getting Started",
     "description": "The label for category 快速上手 in sidebar docs"
   },
   "sidebar.docs.category.使用源码运行": {
-    "message": "使用源码运行",
+    "message": "Run with source code",
     "description": "The label for category 使用源码运行 in sidebar docs"
   },
   "sidebar.docs.category.进阶": {
-    "message": "进阶",
+    "message": "Advanced",
     "description": "The label for category 进阶 in sidebar docs"
   },
   "sidebar.docs.category.编写一个插件": {
-    "message": "编写一个插件",
+    "message": "Write a plugin",
     "description": "The label for category 编写一个插件 in sidebar docs"
   }
 }
