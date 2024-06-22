@@ -3,7 +3,7 @@
     "message": "Home"
   },
   "homepage.title": {
-    "message": "<b>Cross-System</b> and <b>lightweight</b> OpenBMCLAPI Python version"
+    "message": "<b>Cross-system</b> and <b>lightweight</b> OpenBMCLAPI Python version"
   },
   "homepage.button.quick-start": {
     "message": "Getting started"
