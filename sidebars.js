@@ -31,7 +31,7 @@ const sidebars = {
         },
       ],
     },
-    'use-docker',
+    'deploy-with-docker',
   ],
 
   api: [
