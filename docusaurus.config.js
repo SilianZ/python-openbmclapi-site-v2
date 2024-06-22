@@ -112,6 +112,15 @@ const config = {
               },
             ],
           },
+          {
+            title: '更多',
+            items: [
+              {
+                type: 'html',
+                value: '<p>Deploy with <a href="https://vercel.com/">"<img height="32" src="./img/vercel-logo.svg" /></a>.</p>',
+              },
+            ],
+          },
         ],
         logo: {
           alt: 'Python OpenBMCLAPI Logo',
@@ -119,7 +128,7 @@ const config = {
           href: 'https://github.com/TTB-Network/python-openbmclapi',
         },
         copyright: 
-        `版权所有 © ${new Date().getFullYear()} TTB-Network。使用 <a href="https://docusaurus.io">Docusaurus</a> 构建。除非另有声明，本网站内容采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0</a> 授权。`,
+        `版权所有 © ${new Date().getFullYear()} TTB-Network。使用 <a href="https://docusaurus.io">Docusaurus</a> 构建。`,
       },
       prism: {
         theme: prismThemes.github,
