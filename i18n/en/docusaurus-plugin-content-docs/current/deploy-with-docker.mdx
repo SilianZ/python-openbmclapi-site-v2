@@ -2,26 +2,31 @@
 title: Using Docker
 ---
 
-1. Install [Docker](https://docker.com/) on your machine.
+1. 在你的机器上安装好 [Docker](https://docker.com/)。
 
-2. Pull image：
+2. 拉取镜像：
 
     ```sh
     docker pull silianz/python-openbmclapi:latest
     ```
 
-    :::info
+    ````mdx-code-block
+    ::::info
+    ````
 
-    You can also pull with mirror sources:
+
+    你也可使用镜像源进行拉取：
 
     ```sh
     docker pull registry.cn-hangzhou.aliyuncs.com/silianz/python-openbmclapi:latest
     ```
 
-
+    ````
+    :
 :::
+    ````
 
-3. Create a container:
+3. 创建容器：
 
     ```sh
     docker run -d \
@@ -35,15 +40,17 @@ title: Using Docker
     silianz/python-openbmclapi 
     ```
 
-    **Parameter description:**
+    **参数说明：**
 
-    `cluster.public_port` - Port open to others.
+    `cluster.public_port` - 对外开放的端口。
 
-    `cluster.id` - i.e. `CLUSTER_ID`.
+    `cluster.id` - 即 `CLUSTER_ID`。
 
-    `cluster.secret` - i.e. `CLUSTER_SECRET`.
+    `cluster.secret` - 即 `CLUSTER_SECRET`。
 
-:::::info
+````mdx-code-block
+::::info
+````
 
 其他配置参数请参见[配置文件](/docs/advanced/configuration)，请使用**命名空间 ID** 将相应的配置项作为环境变量传入到 Docker 容器中。
 
@@ -53,7 +60,9 @@ title: Using Docker
 -v /path/to/your/config/file:/opt/python-openbmclapi/config/config.yml
 ```
 
+````mdx-code-block
 :::tip 命名空间 ID
+````
 
 命名空间 ID 是将配置项传入 Docker 容器的一种方法。
 
@@ -74,6 +83,8 @@ dashboard.websocker=true
 
 在转化配置项为命名空间 ID 时，使用 `.` 连接配置项的键与值。
 
+````mdx-code-block
 :::  
-::
+:
 :::
+````
