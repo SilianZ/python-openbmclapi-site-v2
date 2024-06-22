@@ -116,8 +116,11 @@ const config = {
             title: '更多',
             items: [
               {
-                html: '<p>Deploy with <a href="https://vercel.com/"><img height="22" src="./img/vercel-logo.svg" /></a></p>',
+                html: '<p>Deploy with <a href="https://vercel.com/"><img height="22" src="./img/vercel.svg" /></a></p>',
               },
+              {
+                html: '<p>Build with <a href="https://docusaurus.io/"><img height="22" src="./img/docusaurus.svg" /></a></p>',
+              }, 
             ],
           },
         ],
