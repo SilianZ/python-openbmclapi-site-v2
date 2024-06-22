@@ -7,6 +7,10 @@
     "message": "Community",
     "description": "The title of the footer links column with title=社区 in the footer"
   },
+  "link.title.更多": {
+    "message": "更多",
+    "description": "The title of the footer links column with title=更多 in the footer"
+  },
   "link.item.label.简介": {
     "message": "Introduction",
     "description": "The label of footer link with label=简介 linking to /docs"
@@ -24,7 +28,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/TTB-Network/python-openbmclapi-site"
   },
   "copyright": {
-    "message": "Copyright © 2024 TTB-Network. Build with <a href=\"https://docusaurus.io\">Docusaurus</a>. Unless otherwise declared, this site's content is licensed under <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Attribution-ShareAlike 4.0 International</a>.",
+    "message": "版权所有 © 2024 TTB-Network。使用 <a href=\"https://docusaurus.io\">Docusaurus</a> 构建。",
     "description": "The footer copyright"
   },
   "logo.alt": {
