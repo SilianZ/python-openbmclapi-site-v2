@@ -10,7 +10,8 @@ title: 使用 Docker
     docker pull silianz/python-openbmclapi:latest
     ```
 
-    :::info
+    ````mdx-code-block
+    ::::info
 
     你也可使用镜像源进行拉取：
 
@@ -18,7 +19,8 @@ title: 使用 Docker
     docker pull registry.cn-hangzhou.aliyuncs.com/silianz/python-openbmclapi:latest
     ```
 
-    :::
+    ::::
+    ````
 
 3. 创建容器：
 
@@ -42,7 +44,8 @@ title: 使用 Docker
 
     `cluster.secret` - 即 `CLUSTER_SECRET`。
 
-    :::info
+    ````mdx-code-block
+    ::::info
     
     其他配置参数请参见[配置文件](/docs/advanced/configuration)，请使用**命名空间 ID** 将相应的配置项作为环境变量传入到 Docker 容器中。
 
@@ -51,8 +54,6 @@ title: 使用 Docker
     ```sh
     -v /path/to/your/config/file:/opt/python-openbmclapi/config/config.yml
     ```
-
-    :::
 
     :::tip 命名空间 ID
 
@@ -76,3 +77,5 @@ title: 使用 Docker
     在转化配置项为命名空间 ID 时，使用 `.` 连接配置项的键与值。
 
     :::
+    ::::
+    ````
