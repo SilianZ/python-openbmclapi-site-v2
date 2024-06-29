@@ -4,7 +4,8 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
+import { translate } from '@docusaurus/Translate'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -116,8 +117,8 @@ const config = {
             title: '更多',
             items: [
               {
-                html: `<p>Powered by <a href="https://vercel.com/"><img height="18" src="/img/vercel.svg" /></a></p>
-                     <p>Build with <a href="https://docusaurus.io/"><img height="25" src="/img/docusaurus.svg" /> <b>Docusaurus</b></a></p>`,
+                html: translate({ id: 'homepage.footer.more', message: `<span>由 <a href="https://vercel.com/"><img height="18" src="/img/vercel.svg" /></a> 强势驱动</span>
+                     <span>使用 <a href="https://docusaurus.io/"><img height="25" src="/img/docusaurus.svg" /></a> 构建</span>` }),
               }, 
             ],
           },
