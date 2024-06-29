@@ -34,6 +34,8 @@ cache:
   time: 1800
 cluster:
   byoc: false
+  download_access_logs: true
+  download_retry_delay: 60
   enable: true
   id: ""
   public_host: ""
@@ -109,18 +111,20 @@ web:
 
 <div className="apiTable">
 
-| 参数                  | 类型        | 默认值     | 是否必填    | 描述                                               |
-| ------------------- | --------- | ------- | ------- | ------------------------------------------------ |
-| `byoc`              | `boolean` | `false` | 否       | 是否不使用 BMCLAPI 分发的证书, 同 `CLUSTER_BYOC`。           |
-| `enable`            | `boolean` | `true`  | 否       | 是否启用节点。                                          |
-| `id`                | `string`  | `''`    | 是       | OpenBMCLAPI 的 `CLUSTER_ID`。                      |
-| `public_host`       | `boolean` | `''`    | 否       | 实际开放的公网主机名, 同 `CLUSTER_IP`。                      |
-| `public_port`       | `int`     | `8800`  | 否       | 实际开放的公网端口, 同 `CLUSTER_PUBLIC_PORT`。              |
-| `reconnect.delay`   | `int`     | `60`    | 否       | 重连间隔。                                            |
-| `reconnect.retry`   | `int`     | `-1`    | 否       | 重连次数，`-1` 为无限次数。                                 |
-| `secret`            | `string`  | `''`    | 是       | OpenBMCLAPI 的 `CLUSTER_SECRET`。                  |
-| `timeout.enable`    | `int`     | `120`   | 否       | 发送启用数据包超时时间。                                     |
-| `timeout.keepalive` | `int`     | `300`   | 否       | 发送保活数据包超时时间。                                     |
+| 参数                     | 类型        | 默认值     | 是否必填    | 描述                                               |
+| ---------------------- | --------- | ------- | ------- | ------------------------------------------------ |
+| `byoc`                 | `boolean` | `false` | 否       | 是否不使用 BMCLAPI 分发的证书, 同 `CLUSTER_BYOC`。           |
+| `enable`               | `boolean` | `true`  | 否       | 是否启用节点。                                          |
+| `download_access_logs` | `boolean` | `true`  | 否       | 是否启用下载日志。                                        |
+| `download_retry_delay` | `int`     | `true`  | 否       | 下载时重试延迟时间。                                       |
+| `id`                   | `string`  | `''`    | 是       | OpenBMCLAPI 的 `CLUSTER_ID`。                      |
+| `public_host`          | `boolean` | `''`    | 否       | 实际开放的公网主机名, 同 `CLUSTER_IP`。                      |
+| `public_port`          | `int`     | `8800`  | 否       | 实际开放的公网端口, 同 `CLUSTER_PUBLIC_PORT`。              |
+| `reconnect.delay`      | `int`     | `60`    | 否       | 重连间隔。                                            |
+| `reconnect.retry`      | `int`     | `-1`    | 否       | 重连次数，`-1` 为无限次数。                                 |
+| `secret`               | `string`  | `''`    | 是       | OpenBMCLAPI 的 `CLUSTER_SECRET`。                  |
+| `timeout.enable`       | `int`     | `120`   | 否       | 发送启用数据包超时时间。                                     |
+| `timeout.keepalive`    | `int`     | `300`   | 否       | 发送保活数据包超时时间。                                     |
 
 </div>
 
