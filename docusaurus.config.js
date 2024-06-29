@@ -5,7 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from 'prism-react-renderer';
-import { translate } from '@docusaurus/Translate'
+import { translate } from '@docusaurus/Translate';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
