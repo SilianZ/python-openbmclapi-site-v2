@@ -116,8 +116,8 @@ const config = {
             title: '更多',
             items: [
               {
-                html: `<span>由 <a href="https://vercel.com/"><img height="18" src="/img/vercel.svg" /></a> 强势驱动</span>
-                     <span>使用 <a href="https://docusaurus.io/"><img height="25" src="/img/docusaurus.svg" /></a> 构建</span>`,
+                html: `<a href="https://vercel.com/"><img height="25" src="/img/vercel.svg" /></a>
+                     <a href="https://docusaurus.io/><img height="25" src="/img/docusaurus.svg" /></a>`,
               }, 
             ],
           },
