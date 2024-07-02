@@ -3,9 +3,9 @@ title: 配置文件
 sidebar_position: 1
 ---
 
-```mdx-code-block
+````mdx-code-block
 import "@site/src/css/table.css";
-```
+````
 
 ## 配置文件 {#configuration-file}
 
@@ -72,23 +72,24 @@ web:
 
 <div className="apiTable">
 
-| 参数                        | 类型      | 默认值                                  | 是否必填 | 描述                                                            |
-| --------------------------- | --------- | --------------------------------------- | -------- | --------------------------------------------------------------- |
-| `auto_update`               | `boolean` | `false`                                 | 否       | 是否启用自动更新（自动更新时会下载最新版本的 Release 压缩包）。 |
-| `copy_from_another_storage` | `boolean` | `true`                                  | 否       | 是否在同步文件时使用已配置储存进行同步。                        |
-| `debug`                     | `boolean` | `false`                                 | 否       | 是否启用调试模式。                                              |
-| `download_threads`          | `int`     | `64`                                    | 否       | 最高下载线程。                                                  |
-| `header_bytes`              | `int`     | `4096`                                  | 否       | 新连接读取数据头大小。                                          |
-| `io_buffer`                 | `int`     | `16777216`                              | 否       | 数据传输缓存大小。                                              |
-| `language`                  | `string`  | `'zh_cn'`                               | 否       | 语言。                                                          |
-| `min_rate`                  | `int`     | `500`                                   | 否       | 最小读取速率（Bytes）。                                         |
-| `min_rate_timestamp`        | `int`     | `1000`                                  | 否       | 最小读取速率时间。                                              |
-| `request_buffer`            | `int`     | `8192`                                  | 否       | 请求缓存大小。                                                  |
-| `skip_sign`                 | `boolean` | `false`                                 | 否       | 是否跳过签名检测。                                              |
-| `timeout`                   | `int`     | `30`                                    | 否       | 超时时间。                                                      |
-| `url`                       | `string`  | `'https://openbmclapi.bangbang93.com/'` | 否       | OpenBMCLAPI 的 BaseURL。                                        |
+| 参数                       | 类型      | 默认值                                   | 是否必填 | 描述                                                         |
+| ------------------------- | --------- | --------------------------------------- | -------- | ------------------------------------------------------------ |
+| `auto_update`             | `boolean` | `false`                                 | 否       | 是否启用自动更新（自动更新时会下载最新版本的 Release 压缩包）。 |
+| `copy_from_another_storage` | `boolean` | `true`                                  | 否       | 是否在同步文件时使用已配置储存进行同步。                     |
+| `debug`                   | `boolean` | `false`                                 | 否       | 是否启用调试模式。                                           |
+| `download_threads`        | `int`     | `64`                                    | 否       | 最高下载线程。                                               |
+| `header_bytes`            | `int`     | `4096`                                  | 否       | 新连接读取数据头大小。                                       |
+| `io_buffer`               | `int`     | `16777216`                              | 否       | 数据传输缓存大小。                                           |
+| `language`                | `string`  | `'zh_cn'`                               | 否       | 语言。                                                       |
+| `min_rate`                | `int`     | `500`                                   | 否       | 最小读取速率（Bytes）。                                      |
+| `min_rate_timestamp`      | `int`     | `1000`                                  | 否       | 最小读取速率时间。                                           |
+| `request_buffer`          | `int`     | `8192`                                  | 否       | 请求缓存大小。                                               |
+| `skip_sign`               | `boolean` | `false`                                 | 否       | 是否跳过签名检测。                                           |
+| `timeout`                 | `int`     | `30`                                    | 否       | 超时时间。                                                   |
+| `url`                     | `string`  | `'https://openbmclapi.bangbang93.com/'` | 否       | OpenBMCLAPI 的 BaseURL。                                     |
 
 </div>
+
 
 ### `cache` {#cache}
 
@@ -111,20 +112,20 @@ web:
 
 <div className="apiTable">
 
-| 参数                   | 类型      | 默认值  | 是否必填 | 描述                                               |
-| ---------------------- | --------- | ------- | -------- | -------------------------------------------------- |
-| `byoc`                 | `boolean` | `false` | 否       | 是否不使用 BMCLAPI 分发的证书, 同 `CLUSTER_BYOC`。 |
-| `enable`               | `boolean` | `true`  | 否       | 是否启用节点。                                     |
-| `download_access_logs` | `boolean` | `true`  | 否       | 是否启用下载日志。                                 |
-| `download_retry_delay` | `int`     | `true`  | 否       | 下载时重试延迟时间。                               |
-| `id`                   | `string`  | `''`    | 是       | OpenBMCLAPI 的 `CLUSTER_ID`。                      |
-| `public_host`          | `boolean` | `''`    | 否       | 实际开放的公网主机名, 同 `CLUSTER_IP`。            |
-| `public_port`          | `int`     | `8800`  | 否       | 实际开放的公网端口, 同 `CLUSTER_PUBLIC_PORT`。     |
-| `reconnect.delay`      | `int`     | `60`    | 否       | 重连间隔。                                         |
-| `reconnect.retry`      | `int`     | `-1`    | 否       | 重连次数，`-1` 为无限次数。                        |
-| `secret`               | `string`  | `''`    | 是       | OpenBMCLAPI 的 `CLUSTER_SECRET`。                  |
-| `timeout.enable`       | `int`     | `120`   | 否       | 发送启用数据包超时时间。                           |
-| `timeout.keepalive`    | `int`     | `300`   | 否       | 发送保活数据包超时时间。                           |
+| 参数                | 类型      | 默认值  | 是否必填 | 描述                                               |
+| ------------------- | --------- | ------- | -------- | -------------------------------------------------- |
+| `byoc`              | `boolean` | `false` | 否       | 是否不使用 BMCLAPI 分发的证书, 同 `CLUSTER_BYOC`。 |
+| `enable`            | `boolean` | `true`  | 否       | 是否启用节点。                                     |
+| `download_access_logs` | `boolean` | `true` | 否     | 是否启用下载日志。                                  |
+| `download_retry_delay` | `int`  | `true`  | 否       | 下载时重试延迟时间。                                |
+| `id`                | `string`  | `''`    | 是       | OpenBMCLAPI 的 `CLUSTER_ID`。                      |
+| `public_host`       | `boolean` | `''`    | 否       | 实际开放的公网主机名, 同 `CLUSTER_IP`。            |
+| `public_port`       | `int`     | `8800`  | 否       | 实际开放的公网端口, 同 `CLUSTER_PUBLIC_PORT`。     |
+| `reconnect.delay`   | `int`     | `60`    | 否       | 重连间隔。                                         |
+| `reconnect.retry`   | `int`     | `-1`    | 否       | 重连次数，`-1` 为无限次数。                        |
+| `secret`            | `string`  | `''`    | 是       | OpenBMCLAPI 的 `CLUSTER_SECRET`。                  |
+| `timeout.enable`    | `int`     | `120`   | 否       | 发送启用数据包超时时间。                           |
+| `timeout.keepalive` | `int`     | `300`   | 否       | 发送保活数据包超时时间。                           |
 
 </div>
 
@@ -205,3 +206,4 @@ bmclapi_webdav:
 | `server_name` | `string`  | `TTB-Network` | 否       |
 
 </div>
+
