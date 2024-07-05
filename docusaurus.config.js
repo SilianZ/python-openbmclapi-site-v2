@@ -117,7 +117,7 @@ const config = {
             items: [
               {
                 html: `<a href="https://vercel.com/"><img height="25" src="/img/vercel.svg" /></a>
-                     <a href="https://docusaurus.io/”><img height="25" src="/img/docusaurus.svg" /></a>`,
+                     <a href="https://docusaurus.io/"><img height="25" src="/img/docusaurus.svg" /></a>`,
               }, 
             ],
           },
