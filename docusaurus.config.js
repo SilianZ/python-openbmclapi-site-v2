@@ -116,7 +116,7 @@ const config = {
             title: '更多',
             items: [
               {
-                html: `<a href="https://vercel.com/"><img height="25" src="/img/vercel.svg" /></a>
+                html: `<a href="https://vercel.com/"><img height="25" src="/img/vercel.svg" /></a><br />
                      <a href="https://docusaurus.io/"><img height="25" src="/img/docusaurus.svg" /></a>`,
               }, 
             ],
