@@ -14,8 +14,8 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "0.0.0-5982",
-    "@docusaurus/preset-classic": "0.0.0-5982",
+    "@docusaurus/core": "0.0.0-6009",
+    "@docusaurus/preset-classic": "0.0.0-6009",
     "@mdx-js/react": "^3.0.0",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
@@ -26,8 +26,8 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "0.0.0-5982",
-    "@docusaurus/types": "0.0.0-5982"
+    "@docusaurus/module-type-aliases": "0.0.0-6009",
+    "@docusaurus/types": "0.0.0-6009"
   },
   "browserslist": {
     "production": [
