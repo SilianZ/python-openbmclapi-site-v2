@@ -1,0 +1,703 @@
+---
+title: 服务器状态信息（status）
+sidebar_position: 1
+---
+
+## 接口地址 {#address}
+
+`/api/status`。
+
+## 请求方式 {#method}
+
+GET。
+
+## 请求参数 {#parameter}
+
+无。
+
+## 响应数据 {#response}
+
+| 字段名      | 类型        | 说明                                                                |
+| ----------- | ----------- | ------------------------------------------------------------------- |
+| `status`    | `number`    | 服务器的运行状态。`-1` 代表同步中，`1` 代表运行中。                 |
+| `startTime` | `number`    | 服务器的启动时间（格式为时间戳，精确到毫秒，例：`1722179843534`）。 |
+| `stats`     | `Stats`     | 最新的一批数据，详见类型定义。                                      |
+| `prevStats` | `Stats`     | 先前的一批数据，详见类型定义。                                      |
+| `accesses`  | `UserAgent` | 下载文件的来源 UA（User-Agent）统计。详见类型定义                   |
+
+## 类型定义 {#types}
+
+### `Stats`
+
+`Stats` 类型的数据用于为 `HitsChart` 提供数据。
+
+这是一个“当日请求”图表（`HitsChart`）的例子。
+
+![](https://s21.ax1x.com/2024/07/28/pkqO6SA.png)
+
+上面的图片很好地解释了 `prevStats` 和 `stats` 的联系与区别。
+
+`prevStats` 为前一天的数据，类型为 `StatsData[]`。
+
+`stats` 为当天数据，类型为 `StatsData[]`。
+
+以此类推，`Stats` 类型中的 `hours`（每天中的每小时）、`days`（每月中的每天）、`months`（每年中的每月）在 `prevStats` 和 `stats` 中所代表的
+含义也是如此。
+
+前端会根据请求到的 `prevStats` 和 `stat` 以及当前时间来处理并显示数据。
+
+在提供数据时，以 `hours` 为例，`hours[0]` 代表当天 1 点的数据，提供 24 个数组元素（到 `hours[23]`）。
+
+`days` 提供数据时按照当月的天数进行提供，例：如果是闰年的二月份的话，则提供到 `days[27]`。
+
+`months` 提供到 `months[11]`。
+
+```ts
+export interface Stats {
+  hours: StatsData[];
+  days: StatsData[];
+  months: StatsData[];
+}
+```
+
+### `StatsData`
+
+这是 `Stats` 使用的基本数据类型，`hits` 代表访问量，`bytes` 代表流量的**字节数（即 B）**。
+
+```ts
+export interface StatsData {
+  hits: number;
+  bytes: number;
+}
+```
+
+### `UserAgent`
+
+该类型用于记录访问者的 User-Agent 信息。
+
+例：
+
+```json
+    "openbmclapi": 54224
+```
+
+`openbmclapi` 代表的是 User-Agent，`54224` 代表的是访问量。
+
+```ts
+export interface UserAgent {
+  [ua: string]: number;
+}
+```
+
+## 响应示例 {#example}
+
+```json
+{
+  "status": 1,
+  "startTime": 1722010274916,
+  "stats": {
+    "hours": [
+      {
+        "hits": 104776,
+        "bytes": 265270404978
+      },
+      {
+        "hits": 136736,
+        "bytes": 322697713310
+      },
+      {
+        "hits": 185299,
+        "bytes": 432999873764
+      },
+      {
+        "hits": 200626,
+        "bytes": 449115696709
+      },
+      {
+        "hits": 211966,
+        "bytes": 482390240164
+      },
+      {
+        "hits": 271805,
+        "bytes": 604009644683
+      },
+      {
+        "hits": 297484,
+        "bytes": 648838098313
+      },
+      {
+        "hits": 283999,
+        "bytes": 695941998207
+      },
+      {
+        "hits": 283277,
+        "bytes": 640229162823
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      }
+    ],
+    "days": [
+      {
+        "hits": 1907983,
+        "bytes": 5497892044454
+      },
+      {
+        "hits": 2313730,
+        "bytes": 6127344928501
+      },
+      {
+        "hits": 2992126,
+        "bytes": 7704666757615
+      },
+      {
+        "hits": 2137785,
+        "bytes": 5056813383402
+      },
+      {
+        "hits": 2781913,
+        "bytes": 6873421694291
+      },
+      {
+        "hits": 2713781,
+        "bytes": 6539368526253
+      },
+      {
+        "hits": 3765494,
+        "bytes": 8324045959526
+      },
+      {
+        "hits": 2869199,
+        "bytes": 6534375706052
+      },
+      {
+        "hits": 3750990,
+        "bytes": 8523354158192
+      },
+      {
+        "hits": 3466073,
+        "bytes": 8312138028716
+      },
+      {
+        "hits": 3718479,
+        "bytes": 8407499071794
+      },
+      {
+        "hits": 4177111,
+        "bytes": 9560855489848
+      },
+      {
+        "hits": 4587997,
+        "bytes": 10710135458744
+      },
+      {
+        "hits": 4457882,
+        "bytes": 10314101088953
+      },
+      {
+        "hits": 4259148,
+        "bytes": 9941037670516
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      }
+    ],
+    "months": [
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 63916891,
+        "bytes": 158094242725019
+      },
+      {
+        "hits": 102320608,
+        "bytes": 274138019834783
+      },
+      {
+        "hits": 85897622,
+        "bytes": 257165505654276
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      }
+    ]
+  },
+  "prevStats": {
+    "hours": [
+      {
+        "hits": 74910,
+        "bytes": 204268947605
+      },
+      {
+        "hits": 143015,
+        "bytes": 353992570691
+      },
+      {
+        "hits": 173399,
+        "bytes": 433595371392
+      },
+      {
+        "hits": 208231,
+        "bytes": 480808834184
+      },
+      {
+        "hits": 227107,
+        "bytes": 573313040456
+      },
+      {
+        "hits": 278404,
+        "bytes": 644623007424
+      },
+      {
+        "hits": 313317,
+        "bytes": 688708558160
+      },
+      {
+        "hits": 307603,
+        "bytes": 685920887509
+      },
+      {
+        "hits": 303763,
+        "bytes": 690628496352
+      },
+      {
+        "hits": 275867,
+        "bytes": 623764402173
+      },
+      {
+        "hits": 242191,
+        "bytes": 575176194821
+      },
+      {
+        "hits": 266518,
+        "bytes": 649828509229
+      },
+      {
+        "hits": 316985,
+        "bytes": 754864319680
+      },
+      {
+        "hits": 299764,
+        "bytes": 705201353885
+      },
+      {
+        "hits": 270707,
+        "bytes": 640315720069
+      },
+      {
+        "hits": 180348,
+        "bytes": 438740242001
+      },
+      {
+        "hits": 117058,
+        "bytes": 260574440967
+      },
+      {
+        "hits": 71723,
+        "bytes": 160257397438
+      },
+      {
+        "hits": 45353,
+        "bytes": 89248570393
+      },
+      {
+        "hits": 30912,
+        "bytes": 64739154136
+      },
+      {
+        "hits": 23421,
+        "bytes": 47256003055
+      },
+      {
+        "hits": 17950,
+        "bytes": 34378572581
+      },
+      {
+        "hits": 22033,
+        "bytes": 35530873482
+      },
+      {
+        "hits": 48569,
+        "bytes": 105302202833
+      }
+    ],
+    "days": [
+      {
+        "hits": 4486331,
+        "bytes": 10659201088831
+      },
+      {
+        "hits": 3597623,
+        "bytes": 10061721667113
+      },
+      {
+        "hits": 2661480,
+        "bytes": 8937660502831
+      },
+      {
+        "hits": 2543871,
+        "bytes": 8486330089963
+      },
+      {
+        "hits": 2462107,
+        "bytes": 7803694039865
+      },
+      {
+        "hits": 2043512,
+        "bytes": 6080799416358
+      },
+      {
+        "hits": 4150728,
+        "bytes": 11787705385423
+      },
+      {
+        "hits": 3163704,
+        "bytes": 8632954070357
+      },
+      {
+        "hits": 3053826,
+        "bytes": 8236233048919
+      },
+      {
+        "hits": 2819633,
+        "bytes": 7995353655580
+      },
+      {
+        "hits": 1911708,
+        "bytes": 5981006049451
+      },
+      {
+        "hits": 2735575,
+        "bytes": 8653939256856
+      },
+      {
+        "hits": 1848667,
+        "bytes": 5808834226969
+      },
+      {
+        "hits": 3377711,
+        "bytes": 10815987567685
+      },
+      {
+        "hits": 873675,
+        "bytes": 2872528007704
+      },
+      {
+        "hits": 3649898,
+        "bytes": 12060713847385
+      },
+      {
+        "hits": 2701106,
+        "bytes": 9886362384990
+      },
+      {
+        "hits": 2616389,
+        "bytes": 9646878746718
+      },
+      {
+        "hits": 2632272,
+        "bytes": 9333936552200
+      },
+      {
+        "hits": 2791662,
+        "bytes": 9843531592131
+      },
+      {
+        "hits": 4020527,
+        "bytes": 11712746069274
+      },
+      {
+        "hits": 4316091,
+        "bytes": 11820690646521
+      },
+      {
+        "hits": 3392119,
+        "bytes": 9339115870586
+      },
+      {
+        "hits": 2789523,
+        "bytes": 7861731176946
+      },
+      {
+        "hits": 1981113,
+        "bytes": 5697934451626
+      },
+      {
+        "hits": 2594541,
+        "bytes": 7692258167924
+      },
+      {
+        "hits": 2799675,
+        "bytes": 7813572582806
+      },
+      {
+        "hits": 3083333,
+        "bytes": 8628776083599
+      },
+      {
+        "hits": 3262317,
+        "bytes": 8737045815352
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      }
+    ],
+    "months": [
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      },
+      {
+        "hits": 0,
+        "bytes": 0
+      }
+    ]
+  },
+  "accesses": {
+    "AndroidDownloadManager": 1,
+    "Apache-Maven": 1,
+    "BMCLNG": 1091,
+    "BakaXL": 445892,
+    "Boat_H2CO3": 728,
+    "Chrome": 3,
+    "ColorMC": 120,
+    "CurseTheBeast": 27,
+    "Dalvik": 883374,
+    "Downloader": 69,
+    "FCL": 10535218,
+    "FileDownloader": 204,
+    "Gradle": 55,
+    "HMCL": 17522739,
+    "HMCL-PE": 57,
+    "Java": 3329,
+    "Java-http-client": 2279,
+    "LauncherX": 4315,
+    "MCL": 5,
+    "MCSLSync": 1,
+    "MCinaBox": 36,
+    "ML": 130,
+    "MMozilla": 3,
+    "MSL": 46,
+    "Mozilla": 4447,
+    "Natsurainko.FluentLauncher": 9,
+    "NsisoLauncher": 199,
+    "Opera": 27,
+    "PCL2": 74479241,
+    "Pojav": 56,
+    "PojavLauncher": 465,
+    "PolarDownloadCore": 52,
+    "PrismLauncher": 6,
+    "Python": 3503,
+    "SLauncher": 95,
+    "SharpCraftLauncher": 321,
+    "VQRL": 69,
+    "[Unknown]": 29342,
+    "bmclapi-ctrl": 1147,
+    "bmclapi-warden": 36533,
+    "github.com": 118,
+    "gomclauncher": 1,
+    "got": 16,
+    "https:": 1,
+    "mozilla": 2,
+    "okhttp": 63,
+    "openbmclapi-cluster": 537159,
+    "python-requests": 576,
+    "quick": 1,
+    "voxelum": 4395
+  }
+}
+```
