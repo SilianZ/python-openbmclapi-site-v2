@@ -18,5 +18,9 @@
   "sidebar.docs.category.编写一个插件": {
     "message": "编写一个插件",
     "description": "The label for category 编写一个插件 in sidebar docs"
+  },
+  "sidebar.api.category.One OpenBMCLAPI Dashboard": {
+    "message": "One OpenBMCLAPI Dashboard",
+    "description": "The label for category One OpenBMCLAPI Dashboard in sidebar api"
   }
 }
