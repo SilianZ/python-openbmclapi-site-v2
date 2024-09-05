@@ -15,38 +15,40 @@ If you want to use Docker, go to [Use Docker](/docs/deploy-with-docker).
 Before using a one-click script, make sure you are ready for：
 
 - Make sure systemd is your startup process
-- [Python](https://www.python.org/) environment (version: 3.10+)
+- [Python](https://www.python.org/) 环境（版本：3.12+）
 
 ## Install {#installation}
 
-Run install script:
+1. 进入系统的 root 用户。
 
-```sh
-curl -fsSL https://raw.githubusercontent.com/TTB-Network/python-openbmclapi/master/installer/installer.sh | sudo bash -s
-```
+2. Run install script:
 
-:::tip
+   ```sh
+   curl -fsSL https://raw.githubusercontent.com/TTB-Network/python-openbmclapi/master/installer/installer.sh | sudo bash -s
+   ```
 
-You can also speed up with mirror sources:
+   :::tip
 
-```sh
-curl -fsSL https://ghproxy.bugungu.top/https://raw.githubusercontent.com/TTB-Network/python-openbmclapi/master/installer/installer.sh | sudo bash -s
-```
+   You can also speed up with mirror sources:
 
-:::
+   ```sh
+   curl -fsSL https://ghproxy.bugungu.top/https://raw.githubusercontent.com/TTB-Network/python-openbmclapi/master/installer/installer.sh | sudo bash -s
+   ```
 
-```mdx-code-block
-<Asciinema
-url="https://asciinema.org/a/657455.cast"
-options={{
-    theme: "monokai",
-    poster: "npt:21.5",
-    cols: 100,
-    rows: 30,
-    idleTimeLimit: 1,
-}}
-/>
-```
+   :::
+
+   ```mdx-code-block
+   <Asciinema
+   url="https://asciinema.org/a/657455.cast"
+   options={{
+       theme: "monokai",
+       poster: "npt:21.5",
+       cols: 100,
+       rows: 30,
+       idleTimeLimit: 1,
+   }}
+   />
+   ```
 
 ## Configure {#configuration}
 
