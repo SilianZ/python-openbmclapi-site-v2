@@ -17,7 +17,7 @@ If you want to use Docker, go to [Use Docker](/docs/deploy-with-docker).
 
    :::info
 
-   Recommended Python version: 3.10+.
+   Python 版本：3.12+。
 
    :::
 
@@ -79,15 +79,77 @@ If you want to use Docker, go to [Use Docker](/docs/deploy-with-docker).
 
 3. Install dependencies:
 
+   :::tip
+
+   你亦可设置 pip 镜像源来加快你在中国大陆地区的下载速度：
+
+   ```sh
+   pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+   ```
+
+   :::
+
+   ```mdx-code-block
+   <Tabs>
+   <TabItem value="c1" label="使用 Poetry（推荐）" default>
+   ```
+
+   1. 安装 [pipx](https://pipx.pypa.io/latest/):
+
+      ```sh
+      pip install --user pipx
+      ```
+
+   2. 重新启动终端。
+
+   3. 安装 [Poetry](https://python-poetry.org/):
+
+      ```sh
+      pipx install poetry
+      pipx ensurepath
+      ```
+
+      :::info
+
+      pipx 需要安装 `python3.10-venv` 包来进行依赖的安装：
+
+      ```sh
+      apt-get install python3.10-venv
+      ```
+
+      :::
+
+   4. 重新启动终端。
+
+   5. 安装依赖：
+
+      ```sh
+      poetry install
+      ```
+
+   ```mdx-code-block
+   <Asciinema
+   url="https://asciinema.org/a/674709.cast"
+   options={{
+       theme: "monokai",
+       poster: "npt:21.5",
+       cols: 100,
+       rows: 30,
+       idleTimeLimit: 1,
+   }}
+   />
+   ```
+
+   ```mdx-code-block
+   </TabItem>
+   <TabItem value="c2" label="使用 pip">
+   ```
+
+   运行安装命令：
+
    ```sh
    pip install -r requirements.txt
    ```
-
-   :::tip
-
-   You may need to install [Microsoft Visual C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
-
-   :::
 
    ```mdx-code-block
    <Asciinema
@@ -100,4 +162,12 @@ If you want to use Docker, go to [Use Docker](/docs/deploy-with-docker).
        idleTimeLimit: 0.2,
    }}
    />
+   </TabItem>
+   </Tabs>
    ```
+
+   :::tip
+
+   You may need to install [Microsoft Visual C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+
+   :::
