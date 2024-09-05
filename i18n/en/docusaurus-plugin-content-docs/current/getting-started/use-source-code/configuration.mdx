@@ -9,6 +9,29 @@ import Asciinema from "@site/src/components/Asciinema";
 
 1. 运行一次主程序生成配置文件：
 
+   :::info
+
+   如果你使用 Poetry 安装依赖，你需要先激活虚拟环境。
+
+   ```sh
+   poetry shell
+   ```
+
+   ```mdx-code-block
+   <Asciinema
+   url="https://asciinema.org/a/674764.cast"
+   options={{
+       theme: "monokai",
+       poster: "npt:21.5",
+       cols: 100,
+       rows: 30,
+       idleTimeLimit: 0.2,
+   }}
+   />
+   ```
+
+   :::
+
    ```sh
    python main.py
    ```
