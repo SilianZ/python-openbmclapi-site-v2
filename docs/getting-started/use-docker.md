@@ -1,6 +1,4 @@
----
-title: 使用 Docker
----
+# 使用 Docker {#deploy-with-docker}
 
 1. 在你的机器上安装好 [Docker](https://docker.com/)。
 

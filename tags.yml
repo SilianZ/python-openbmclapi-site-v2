@@ -1,8 +1,0 @@
-installation:
-  label: '安装'
-  permalink: '/installation'
-  description: '安装文档。'
-introduction:
-  label: '介绍'
-  permalink: '/introductions'
-  description: '介绍文档。'

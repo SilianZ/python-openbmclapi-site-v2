@@ -1,14 +1,12 @@
----
-title: 使用一键脚本
----
+# 使用一键脚本（推荐） {#use-systemd}
 
-````mdx-code-block
-import Asciinema from "@site/src/components/Asciinema";
-````
+<script setup>
+import AsciinemaPlayer from '/components/AsciinemaPlayer.vue'
+</script>
 
 仅适用于 Linux amd64 / arm64 平台。
 
-如果你想使用 Docker，请转到[使用 Docker](/docs/deploy-with-docker)。
+如果你想使用 Docker，请转到[使用 Docker](/docs/getting-started/use-docker)。
 
 ## 准备 {#prepare}
 
@@ -24,7 +22,7 @@ import Asciinema from "@site/src/components/Asciinema";
 2. 运行安装脚本：
 
     ```sh
-    curl -fsSL https://raw.githubusercontent.com/TTB-Network/python-openbmclapi/master/installer/installer.sh | sudo bash -s
+    curl -fsSL https://raw.githubusercontent.com/TTB-Network/python-openbmclapi-v2/main/installer/installer.sh | sudo bash -s
     ```
 
     :::tip
@@ -32,37 +30,34 @@ import Asciinema from "@site/src/components/Asciinema";
     你亦可以使用镜像源加速：
 
     ```sh
-    curl -fsSL https://ghproxy.bugungu.top/https://raw.githubusercontent.com/TTB-Network/python-openbmclapi/master/installer/installer.sh | sudo bash -s
+    curl -fsSL https://ghproxy.bugungu.top/https://raw.githubusercontent.com/TTB-Network/python-openbmclapi-v2/main/installer/installer.sh | sudo bash -s
     ```
 
     :::
-
-    ````mdx-code-block
-    <Asciinema
-    url="https://asciinema.org/a/657455.cast"
-    options={{
-        theme: "monokai",
-        poster: "npt:21.5",
+    
+    <AsciinemaPlayer
+    url="https://asciinema.org/a/698358.cast"
+    :options="{
+        theme: 'monokai',
+        poster: 'npt:21.5',
         cols: 100,
         rows: 30,
         idleTimeLimit: 1,
-    }}
+    }"
     />
-    ````
 
 
 ## 配置 {#configuration}
 
 1. 在 `/opt/python-openbmclapi/config/config.yml` 中，填写你的 `id`（即 `CLUSTER_ID`）和 `secret`（即 `CLUSTER_SECRET`）。
 
-    ```yml title="/opt/python-openbmclapi/config/config.yml" {3,6}
+    ```yml
     cluster:
       byoc: false
-      id: '' # OpenBMCLAPI 的 CLUSTER_ID
+      id: '' # OpenBMCLAPI 的 CLUSTER_ID // [!code focus]
       public_host: ''
       ...
-      secret: '' # OpenBMCLAPI 的 CLUSTER_SECRET
-      skip_sign: false
+      secret: '' # OpenBMCLAPI 的 CLUSTER_SECRET // [!code focus]
     ```
 
 2. 重新启动程序：

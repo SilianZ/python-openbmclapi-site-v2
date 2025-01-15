@@ -1,7 +1,0 @@
-files:
-  - source: /i18n/zh-Hans/**/*.json
-    translation: /i18n/%language%/**/%original_file_name%
-  - source: /docs/**/*
-    ignore:
-      - '**.json'
-    translation: /i18n/%language%/docusaurus-plugin-content-docs/current/**/%original_file_name%
