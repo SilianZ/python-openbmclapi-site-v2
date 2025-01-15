@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import * as AsciinemaPlayer from 'asciinema-player'
 import { ref, onMounted } from 'vue'
 import 'asciinema-player/dist/bundle/asciinema-player.css'
 const props = defineProps<{
@@ -22,9 +21,9 @@ const props = defineProps<{
 
 const asciinemaRef = ref()
 onMounted(() => {
-    if (asciinemaRef.value) {
+    import('asciinema-player').then((AsciinemaPlayer) => {
         AsciinemaPlayer.create(props.url, asciinemaRef.value, props.options)
-    }
+    })
 })
 </script>
 
